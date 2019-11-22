@@ -50,7 +50,7 @@ DAMD is an end-to-end model designed to handle the multi-domain response generat
 
 ### Model ablations:
 - When **enable_aspn=False**, the action span decoder is disabled and the model reduces to a multi-domain version of the Sequicity model ([paper](https://www.comp.nus.edu.sg/~kanmy/papers/acl18-sequicity.pdf) & [code](https://github.com/WING-NUS/sequicity)), denoted as MD-Sequicity. 
-- When **enable_bspn=False**, the belief span decoder and action span decoder are disabled and the model reduces to a Seq2Seq model with copy mechanism. 
+- When **enable_bspn=False**, the belief span decoder and action span decoder are disabled and the model reduces to a Seq2Seq model with [copy mechanism](https://arxiv.org/abs/1603.06393). 
 - When **bspn_mode=bspn** (enable_bspn=True as precondition), the model tracks both the slot and values in user utterance. For evaluation, the tracked dialog state can be used for database search if you set enable_dst=True, otherwise the ground truth dialog state will be used.  
 - When **bspn_mode=bsdx** (enable_bspn=True as precondition), the model tracks only the slot mentioned by user. For evaluation, the ground truth dialog state of MultiWOZ is used for database search. 
 
