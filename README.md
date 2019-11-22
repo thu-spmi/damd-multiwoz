@@ -1,5 +1,5 @@
 # DAMD-MultiWOZ
-This is the code and data for AAAI 2020 paper "Improving Task-Oriented Dialog Systems by Considering Multiple AppropriateResponses with Different Dialog Policies". 
+This is the code and data for AAAI 2020 paper "Improving Task-Oriented Dialog Systems by Considering Multiple AppropriateResponses with Different Dialog Policies". The paper link will be available soon. 
 
 
 ## Requirements
@@ -46,6 +46,7 @@ The overview of our model structure:
 <img src="figures/DAMD.png" width="50%" />
 </p>
 
+DAMD is an end-to-end model designed to handle the multi-domain response generation problem through leveraging our multi-action data augmentation framework. There are one encoder that encodes dialog context and three decoders that decodes belief span, system action span and system response respectively.
 
 ### Model ablations:
 - When **enable_aspn=False**, the action span decoder is disabled and the model reduces to a multi-domain version of the Sequicity model ([paper](https://www.comp.nus.edu.sg/~kanmy/papers/acl18-sequicity.pdf) & [code](https://github.com/WING-NUS/sequicity)), denoted as MD-Sequicity. 
