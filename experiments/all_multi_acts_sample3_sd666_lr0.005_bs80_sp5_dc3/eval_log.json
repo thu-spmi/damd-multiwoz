@@ -1,0 +1,91 @@
+INFO:root:Device: 0
+INFO:root:Device: 0
+INFO:root:vocab_path_train : ./data/multi-woz-processed/vocab
+vocab_path_eval : experiments/all_multi_acts_sample3_sd666_lr0.005_bs80_sp5_dc3/vocab
+data_path : ./data/multi-woz-processed/
+data_file : data_for_damd.json
+dev_list : data/multi-woz/valListFile.json
+test_list : data/multi-woz/testListFile.json
+dbs : {'attraction': 'db/attraction_db_processed.json', 'hospital': 'db/hospital_db_processed.json', 'hotel': 'db/hotel_db_processed.json', 'police': 'db/police_db_processed.json', 'restaurant': 'db/restaurant_db_processed.json', 'taxi': 'db/taxi_db_processed.json', 'train': 'db/train_db_processed.json'}
+glove_path : ./data/glove/glove.6B.50d.txt
+domain_file_path : data/multi-woz-processed/domain_files.json
+slot_value_set_path : db/value_set_processed.json
+multi_acts_path : data/multi-woz-processed/multi_act_mapping_train.json
+exp_path : experiments/all_multi_acts_sample3_sd666_lr0.005_bs80_sp5_dc3/
+log_time : 2019-11-23-00-17-00
+mode : test
+cuda : True
+cuda_device : [0]
+exp_no : multi_acts_sample3
+seed : 666
+exp_domains : ['all']
+save_log : True
+report_interval : 5
+max_nl_length : 60
+max_span_length : 30
+truncated : False
+vocab_size : 3000
+embed_size : 50
+hidden_size : 100
+pointer_dim : 6
+enc_layer_num : 1
+dec_layer_num : 1
+dropout : 0
+layer_norm : False
+skip_connect : False
+encoder_share : False
+attn_param_share : False
+copy_param_share : False
+enable_aspn : True
+use_pvaspn : False
+enable_bspn : True
+bspn_mode : bsdx
+enable_dspn : False
+enable_dst : False
+lr : 0.005
+label_smoothing : 0.0
+lr_decay : 0.5
+batch_size : 80
+epoch_num : 100
+early_stop_count : 5
+weight_decay_count : 3
+teacher_force : 100
+multi_acts_training : True
+multi_act_sampling_num : 3
+valid_loss : score
+eval_load_path : experiments/all_multi_acts_sample3_sd666_lr0.005_bs80_sp5_dc3
+eval_settings : []
+eval_per_domain : False
+use_true_pv_resp : True
+use_true_prev_bspn : False
+use_true_prev_aspn : False
+use_true_prev_dspn : False
+use_true_curr_bspn : False
+use_true_curr_aspn : False
+use_true_bspn_for_ctr_eval : True
+use_true_domain_for_ctr_eval : False
+use_true_db_pointer : False
+limit_bspn_vocab : False
+limit_aspn_vocab : False
+same_eval_as_cambridge : True
+same_eval_act_f1_as_hdsa : False
+aspn_decode_mode : greedy
+beam_width : 5
+nbest : 5
+beam_diverse_param : 0.2
+act_selection_scheme : high_test_act_f1
+topk_num : 1
+nucleur_p : 0.0
+record_mode : False
+model_path : experiments/all_multi_acts_sample3_sd666_lr0.005_bs80_sp5_dc3/model.pkl
+result_path : experiments/all_multi_acts_sample3_sd666_lr0.005_bs80_sp5_dc3/result.csv
+multi_gpu : False
+model_parameters : 1985700
+
+INFO:root:Model loaded
+INFO:root:-------------------------- All DOMAINS --------------------------
+INFO:root:[BDX] joint goal:49.2  slot acc: 96.7  slot f1: 89.8  act f1: 48.8
+INFO:root:[BDX] [not eval name slots] joint goal:60.1  slot acc: 97.6  slot f1: 91.8
+INFO:root:[CTR] match: 92.6  success: 79.1  bleu: 19.5
+INFO:root:[CTR] postcode: 81.3; address: 87.5; phone: 88.2; id: 97.2; reference: 97.5
+INFO:root:[DOM] accuracy: single 96.2 / multi: 21.2 (66)
