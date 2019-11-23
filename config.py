@@ -75,8 +75,6 @@ class _Config:
 
         # evaluation settings
         self.eval_load_path ='experiments/all_multi_acts_sample3_sd777_lr0.005_bs80_sp5_dc3'
-        self.eval_settings = [
-        ]
         self.eval_per_domain = False
         self.use_true_pv_resp = True
         self.use_true_prev_bspn = False
