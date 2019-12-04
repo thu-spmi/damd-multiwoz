@@ -21,7 +21,7 @@ Get ready for preprocessng:
 ```
 python data_analysis.py
 ```
-Data preprocessing: Normalization, utterance delexicalization and conversion of original dialog state/action labels to text-span form. A detailed introduction is available [here] (./data/multi-woz/README.md). 
+Data preprocessing: Normalization, utterance delexicalization and conversion of original dialog state/action labels to text-span form. A detailed introduction is available [here](./data/multi-woz/README.md). 
 ```
 python preprocess.py
 ```
