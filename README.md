@@ -1,5 +1,5 @@
 # DAMD-MultiWOZ
-This is the code and data for AAAI 2020 paper "Task-Oriented Dialog Systems that Consider Multiple Appropriate Responses under the Same Context". The paper link will be available soon. 
+This is the code and data for AAAI 2020 paper "Task-Oriented Dialog Systems that Consider Multiple Appropriate Responses under the Same Context". [[paper link]](https://arxiv.org/abs/1911.10484) 
 
 
 ## Requirements
@@ -21,10 +21,12 @@ Get ready for preprocessng:
 ```
 python data_analysis.py
 ```
-Data preprocessing: Normalization, utterance delexicalization and conversion of original dialog state/action labels to text-span form.   
+Data preprocessing: Normalization, utterance delexicalization and conversion of original dialog state/action labels to text-span form. A detailed introduction is available [here] (./data/multi-woz/README.md). 
 ```
 python preprocess.py
 ```
+
+
 
 ## Multi-Action Data Augmentation (MADA)
 Run our data augmentation algorithm to obtain additional valid state-action mappings:
